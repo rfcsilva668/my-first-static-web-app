@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cloud Coffee</title>
+  <title>Café Aroma</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -86,14 +86,34 @@
     .menu-card {
       background-color: var(--caramel);
       border-radius: 12px;
-      padding: 1.5rem;
+      overflow: hidden;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-card-content {
+      padding: 1rem;
     }
 
     .menu-card h3 {
       font-family: 'Playfair Display', serif;
       margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .menu-card p {
+      font-size: 0.95rem;
     }
 
     .cta {
@@ -139,14 +159,14 @@
 <body>
 
   <header>
-    <h1>Cloud Coffee</h1>
+    <h1>Café Aroma</h1>
     <p>Your daily brew of joy ☕</p>
   </header>
 
   <section class="about">
-    <h2>Welcome to Cloud Coffee</h2>
+    <h2>Welcome to Café Aroma</h2>
     <p>
-      Nestled in the heart of the city, Cloud Coffee is your cozy corner for rich espresso, artisan pastries, and heartfelt conversations. Whether you’re catching up with friends or diving into a book, our café offers the perfect aroma-filled escape.
+      Nestled in the heart of the city, Café Aroma is your cozy corner for rich espresso, artisan pastries, and heartfelt conversations. Whether you’re catching up with friends or diving into a book, our café offers the perfect aroma-filled escape.
     </p>
   </section>
 
@@ -154,20 +174,32 @@
     <h2>Our Favorites</h2>
     <div class="menu-items">
       <div class="menu-card">
-        <h3>Caramel Latte</h3>
-        <p>Rich espresso with steamed milk and silky caramel.</p>
+        <img src="https://source.unsplash.com/400x300/?caramel-latte,coffee" alt="Caramel Latte">
+        <div class="menu-card-content">
+          <h3>Caramel Latte</h3>
+          <p>Rich espresso with steamed milk and silky caramel.</p>
+        </div>
       </div>
       <div class="menu-card">
-        <h3>Mocha Bliss</h3>
-        <p>Dark chocolate and espresso topped with whipped cream.</p>
+        <img src="https://source.unsplash.com/400x300/?mocha,coffee" alt="Mocha Bliss">
+        <div class="menu-card-content">
+          <h3>Mocha Bliss</h3>
+          <p>Dark chocolate and espresso topped with whipped cream.</p>
+        </div>
       </div>
       <div class="menu-card">
-        <h3>Chai Spice</h3>
-        <p>Aromatic black tea blended with spices and milk.</p>
+        <img src="https://source.unsplash.com/400x300/?chai-tea,spices" alt="Chai Spice">
+        <div class="menu-card-content">
+          <h3>Chai Spice</h3>
+          <p>Aromatic black tea blended with spices and milk.</p>
+        </div>
       </div>
       <div class="menu-card">
-        <h3>Fresh Croissant</h3>
-        <p>Flaky, buttery pastry made fresh every morning.</p>
+        <img src="https://source.unsplash.com/400x300/?croissant,breakfast" alt="Fresh Croissant">
+        <div class="menu-card-content">
+          <h3>Fresh Croissant</h3>
+          <p>Flaky, buttery pastry made fresh every morning.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -179,7 +211,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Cloud Coffee. Crafted with love & coffee.
+    &copy; 2025 Café Aroma. Crafted with love & coffee.
   </footer>
 
 </body>
